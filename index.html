@@ -3,7 +3,29 @@
 <head>
 	<meta charset=utf-8> 
 	<title>Web Page Title</title>
+	<script src="http://code.jquery.com/jquery.js"></script>
 </head>
-<body>                
+<body>
+	<div id="station1"></div>
+	<script>
+	$(function(){
+		var data = [ {	"name": "Eastern Standard" }, {	"name": "Improv Asylum" }, {	"name": "The Hawthorne" }, {	"name": "The Elephant Walk" }, {	"name": "Improv Boston" }, {	"name": "Nick's Comedy Stop" } ];
+
+		$.each(data, function(index, value) {
+		  $("<p>" + data[Math.floor(Math.random()*data.length)].name + "</p>").appendTo("#station1");
+		});
+	});
+	</script>
+
+	    <hr />
+
+	<div id="station2"></div>
+	<script>
+	$(function(){
+		$.getJSON("places.json", function(data) {
+		  $("<p>" + data[Math.floor(Math.random()*data.length)].name + "</p>").appendTo("#station2");
+		});
+	});
+	</script>
 </body>
 </html>
