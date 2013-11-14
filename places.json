@@ -1,1 +1,8 @@
-[ {	"name": "Eastern Standard" }, {	"name": "Improv Asylum" }, {	"name": "The Hawthorne" }, {	"name": "The Elephant Walk" }, {	"name": "Improv Boston" }, {	"name": "Nick's Comedy Stop" } ]
+[
+	{	"name": "Eastern Standard" }, 
+	{	"name": "Improv Asylum" }, 
+	{	"name": "The Hawthorne" }, 
+	{	"name": "The Elephant Walk" }, 
+	{	"name": "Improv Boston" }, 
+	{	"name": "Nick's Comedy Stop" }
+]
