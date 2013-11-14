@@ -1,0 +1,26 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+
+header {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+section {
+	margin-top: 200px;
+	text-align: center;
+}
+
+aside#why {
+	margin-bottom: 40px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+aside#nah {
+	margin-top: 10px;
+}

@@ -3,28 +3,35 @@
 <head>
 	<meta charset=utf-8>
 	<title>Boston Roulette</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="http://code.jquery.com/jquery.js"></script>
 </head>
+
 <body>
-	
+	<header>:: Boston Roulette ::</header>
 	<section>
-		<aside>Why don't you try</aside>
+		<aside id="why">Why don't you try</aside>
 		<h1></h1>
 		<aside id="nah">nah</aside>
 	</section>
-
 </body>
 </html>
 
 <script>
-$(document).ready(function(){
-	$.getJSON('places.json'), function(data) {
-		var place = data[Math.floor(Math.random()*data.length)];
-		$("h1").append(place);
+$(document).ready(function() {
+	// on load	
+	$.getJSON("places.json", function(data) {
+		var rand_num = Math.floor(Math.random()*data.length);
+		$("h1").append(data[rand_num].name);
+	 	
+	 	// on click
+	 	$("#nah").click(function(){
+	 		rand_num = Math.floor(Math.random()*data.length);
+	 		$("h1").empty();
+  		$("h1").append(data[rand_num].name);
+  	});	
 	});
-  //$("#nah").click(function(){
-    //$("h1").hide();
-  //});
 });
 </script>
 
