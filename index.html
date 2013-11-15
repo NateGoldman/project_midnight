@@ -13,7 +13,7 @@
 	<section>
 		<aside id="why">Why don't you try</aside>
 		<h1></h1>
-		<aside id="nah">nah</aside>
+		<aside id="nah"><a id="nah_a" href="">nah</a></aside>
 	</section>
 </body>
 </html>
@@ -26,7 +26,8 @@ $(document).ready(function() {
 		$("h1").append(data[rand_num].name);
 	 	
 	 	// on click
-	 	$("#nah").click(function(){
+	 	$("#nah_a").click(function(event){
+	 		event.preventDefault();
 	 		rand_num = Math.floor(Math.random()*data.length);
 	 		$("h1").empty();
   		$("h1").append(data[rand_num].name);
