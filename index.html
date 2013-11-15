@@ -3,36 +3,37 @@
 <head>
 	<meta charset=utf-8>
 	<title>Boston Roulette</title>
+
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="ecma.js"></script>
 </head>
 
 <body>
-	<header>:: Boston Roulette ::</header>
-	<section>
-		<aside id="why">Why don't you try</aside>
-		<h1></h1>
-		<aside id="nah"><a id="nah_a" href="">nah</a></aside>
+
+	<section id="main">
+		<aside id="why">Why don't you try:</aside>
+		<!-- the next two elements are where things magically appear -->
+		<h1 id="place"></h1>
+		<p id="caption"></p>
+		<aside id="nah_or_google">
+			<button id="nah" class="btn btn-danger btn-xs">nah</button>
+			<a id="google_it" class="btn btn-success btn-xs" target="_blank" href="">google it</a>
+		</aside>
 	</section>
+
+	<section id="resources">
+			also check out:
+			<a target="_blank" href="http://www.thebostoncalendar.com">The Boston Calendar</a> 
+			and
+			<a target="_blank" href="http://www.reddit.com/r/bostonsocialclub">/r/bostonsocialclub</a> 
+	</section>
+
+	<footer>:: Boston Roulette ::</footer>
+
 </body>
 </html>
-
-<script>
-$(document).ready(function() {
-	// on load	
-	$.getJSON("places.json", function(data) {
-		var rand_num = Math.floor(Math.random()*data.length);
-		$("h1").append(data[rand_num].name);
-	 	
-	 	// on click
-	 	$("#nah_a").click(function(event){
-	 		event.preventDefault();
-	 		rand_num = Math.floor(Math.random()*data.length);
-	 		$("h1").empty();
-  		$("h1").append(data[rand_num].name);
-  	});	
-	});
-});
-</script>
-

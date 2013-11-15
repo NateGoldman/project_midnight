@@ -2,12 +2,6 @@ body {
 	font-family: arial, helvetica, sans-serif;
 }
 
-header {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
 section {
 	margin-top: 200px;
 	text-align: center;
@@ -15,14 +9,21 @@ section {
 
 aside#why {
 	margin-bottom: 40px;
+	font-size: 20px;
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 80px;
 }
 
-aside#nah {
-	margin-top: 10px;
+aside#nah_or_google {
+	margin-top: 20px;
 }
 
-a:link, a:visited, a:hover, a:active {color: #000; text-decoration: none};
+footer {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	font-weight: bold;
+	font-size: 10px;	
+}
