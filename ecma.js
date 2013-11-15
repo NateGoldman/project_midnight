@@ -6,7 +6,7 @@ $(document).ready(function() {
   		$("#place").append(data[rand_num].place);
   		$("#caption").empty();
   		$("#caption").append('"' + data[rand_num].caption + '"');
-  		$("#google_it").attr("href", "https://www.google.com/search?q=" + data[rand_num].name + "+Boston")
+  		$("#google_it").attr("href", "https://www.google.com/search?q=" + data[rand_num].place + "+Boston")
 	}
 
 	// on load	
