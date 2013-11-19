@@ -2,22 +2,58 @@ body {
 	font-family: arial, helvetica, sans-serif;
 }
 
+@font-face
+{
+	font-family: Bebas;
+	src: url(bebasneue.otf);
+}
+
 section {
-	margin-top: 200px;
+	margin-top: 150px;
 	text-align: center;
 }
 
 aside#why {
-	margin-bottom: 40px;
-	font-size: 20px;
+	padding-bottom: 0px;
+	font-size: 40px;
+	font-family: Bebas;
 }
 
 h1 {
-	font-size: 80px;
+	font-family: Bebas;
+	font-size: 100px;
+	display: inline-block;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 0px;
 }
 
 aside#nah_or_google {
+	font-family: Bebas;
 	margin-top: 20px;
+}
+
+.boxed {
+	border: 1px black;
+	width: 120px;
+	height: 30px;
+	background-color: #000000;
+	position: relative;
+	top: 60%;
+	left: 39%;
+	font-family: arial;
+	font-size: 23px;
+}
+
+.google-box {
+	border: 1px black;
+	width: 120px;
+	height: 30px;
+	background-color: #000000;
+	position: relative;
+	bottom: 106%;
+	left: 110%;
+	font-family: arial;
+	font-size: 23px;
 }
 
 footer {
